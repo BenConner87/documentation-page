@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito&family=Roboto+Mono:wght@200;300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding 0;
+    color: white;
+    background-color: darkgray; 
+    
+    
+}
+
+.main-body {
+   
+    display: grid;
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-areas: "navbar mainContent";
+    grid-gap: 30px; 
+    margin-right: 5px;
+     
+}
+
+#navbar {
+    grid-area: navbar; 
+    position: fixed;
+    left: 0px;
+   
+}
+
+#navbar a {
+    display: block;
+    border: 2px solid white;
+    padding: 5px;
+    margin: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background-color:  rgba(37, 149, 157, 0.5);
+    font-family: 'Nunito', sans-serif;
+}
+
+#main-doc {
+    grid-area: mainContent;
+    
+}
+
+header {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+code {
+    background-color: rgba(37, 149, 157, 0.5);
+    display: block;
+    padding: 20px;
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+li {
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+
+@media screen and (max-width: 750px) {
+    .main-body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "navbar" "mainContent";
+    }
+
+    #navbar {
+        position: inherit;
+    }
+}
